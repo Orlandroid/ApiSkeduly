@@ -18,8 +18,10 @@ app.use(alumno)
 app.use(sucursal)
 app.use(servicios)
 
-app.get("/estados", (req, res) => {
-  res.send(estados)
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+  res.render('inicio.ejs')
 })
 
 app.get('/matricula/:id', function(peticion, respuesta) {
