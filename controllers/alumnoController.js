@@ -1,12 +1,13 @@
 const Alumno = require('../models/Alumno')
 const alumno = require('../models/Alumno')
 
+
 module.exports.mostrar = (req,res)=>{
     alumno.find({},(error,alumnos)=>{
         if(error){
             console.log("Error al mostrar los alumnos")
         }
-        console.log(alumnos)
+        res.send(alumnos)
     })
 }
 
