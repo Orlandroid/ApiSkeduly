@@ -12,9 +12,11 @@ app.set('view engine', 'ejs');
 
 const alumno = require('./routes/alumnos')
 const sucursal = require('./routes/sucursales')
+const servicios = require('./routes/servicios')
 
 app.use(alumno)
 app.use(sucursal)
+app.use(servicios)
 
 app.get("/estados", (req, res) => {
   res.send(estados)
@@ -35,9 +37,8 @@ app.get('/home2', (req, res) => {
 })
 
 
-app.post('/hola',(req,res) =>{
-  console.log("Hola mundo")
-  console.log(req.body)
+app.get('/hola',(req,res) =>{
+  res.render('servicios')
 })
 
 app.listen(PORT, function () {
