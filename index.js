@@ -30,7 +30,7 @@ app.get('/matricula/:id', function(peticion, respuesta) {
   });
 })
 
-app.get("/home",(req,res) =>{
+app.get("/navSucursal",(req,res) =>{
   res.render('sucursal.ejs')
 })
 
@@ -39,7 +39,7 @@ app.get('/home2', (req, res) => {
 })
 
 
-app.get('/hola',(req,res) =>{
+app.get('/navServicios',(req,res) =>{
   res.render('servicios')
 })
 
