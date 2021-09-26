@@ -10,11 +10,9 @@ app.use(express.json())
 /***This line of code is for use ejs motor engine */
 app.set('view engine', 'ejs');
 
-const alumno = require('./routes/alumnos')
 const sucursal = require('./routes/sucursales')
 const servicios = require('./routes/servicios')
 
-app.use(alumno)
 app.use(sucursal)
 app.use(servicios)
 
@@ -22,25 +20,6 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   res.render('inicio.ejs')
-})
-
-app.get('/matricula/:id', function(peticion, respuesta) {
-  respuesta.render('matricula.ejs', {
-      id : peticion.params.id
-  });
-})
-
-app.get("/navSucursal",(req,res) =>{
-  res.render('sucursal.ejs')
-})
-
-app.get('/home2', (req, res) => {
-  res.sendFile(__dirname +'/index.html')
-})
-
-
-app.get('/navServicios',(req,res) =>{
-  res.render('servicios')
 })
 
 app.listen(PORT, function () {
