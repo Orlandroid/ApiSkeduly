@@ -11,4 +11,8 @@ router.get('/navServicios',(req,res) =>{
     res.render('servicios')
 })
 
+router.get('/navListaServicios',servicioController.mostrarView)
+
+router.get('/borrar/:id',servicioController.eliminar)
+
 module.exports = router
