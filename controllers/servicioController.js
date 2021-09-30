@@ -22,5 +22,7 @@ module.exports.create = (req,res)=>{
             console.log(error)
         }
         console.log(sucursal)
+        res.redirect('/navServicios')
     })
+
 }
