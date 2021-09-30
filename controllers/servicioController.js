@@ -24,7 +24,7 @@ module.exports.mostrarView = (req,res)=>{
 
 module.exports.eliminar = (req,res)=>{
     const id = req.params.id
-      servicio.findByIdAndRemove(id,(error,servicio)=>{
+       servicio.findByIdAndRemove(id,(error,servicio)=>{
         if(error){
             console.log("Error al eliminar el alumnos")
             return res.status(500).json({
