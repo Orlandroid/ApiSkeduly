@@ -13,10 +13,12 @@ app.set('view engine', 'ejs');
 const sucursal = require('./routes/sucursales')
 const servicios = require('./routes/servicios')
 const staff = require('./routes/staffs')
+const appointment = require('./routes/appointments')
 
 app.use(sucursal)
 app.use(servicios)
 app.use(staff)
+app.use(appointment)
 
 app.use(express.static('public'))
 
