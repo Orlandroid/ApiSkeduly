@@ -14,6 +14,7 @@ const db = mongoose.connect(url,connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
+    
 
 
 module.exports = db
